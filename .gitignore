@@ -1,0 +1,16 @@
+# Secrets
+.env
+
+# Virtual environment
+.venv/
+
+# Runtime logs
+logs/
+
+# Python cache / build artifacts
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Brief / assignment documents
+.docx
