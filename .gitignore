@@ -6,6 +6,7 @@
 
 # Runtime logs
 logs/
+*.log
 
 # Python cache / build artifacts
 __pycache__/
