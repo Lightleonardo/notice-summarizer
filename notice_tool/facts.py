@@ -23,7 +23,7 @@ from dataclasses import dataclass, field
 # --------------------------------------------------------------------------- #
 # Dates
 # --------------------------------------------------------------------------- #
-_MONTHS = {
+MONTHS = {
     "january": 1, "jan": 1,
     "february": 2, "feb": 2,
     "march": 3, "mar": 3,
@@ -39,7 +39,7 @@ _MONTHS = {
 }
 
 # Longest names first so "september" wins over "sep" and "march" over "mar".
-_MONTH_ALT = "|".join(sorted(_MONTHS, key=len, reverse=True))
+_MONTH_ALT = "|".join(sorted(MONTHS, key=len, reverse=True))
 
 # A month name, optionally abbreviated with a trailing full stop ("Nov.").
 _MONTH_CAPTURE = rf"(?<![A-Za-z])({_MONTH_ALT})\.?(?![A-Za-z])"
@@ -71,19 +71,19 @@ def extract_dates(text: str) -> set[tuple[int, int]]:
     found: set[tuple[int, int]] = set()
 
     for m in _DAY_RANGE_MONTH.finditer(text):
-        month = _MONTHS[m.group(3).lower()]
+        month = MONTHS[m.group(3).lower()]
         found.add((month, int(m.group(1))))
         found.add((month, int(m.group(2))))
 
     for m in _DAY_MONTH.finditer(text):
         day = int(m.group(1))
         if 1 <= day <= 31:
-            found.add((_MONTHS[m.group(2).lower()], day))
+            found.add((MONTHS[m.group(2).lower()], day))
 
     for m in _MONTH_DAY.finditer(text):
         day = int(m.group(2))
         if 1 <= day <= 31:
-            found.add((_MONTHS[m.group(1).lower()], day))
+            found.add((MONTHS[m.group(1).lower()], day))
 
     for m in _NUMERIC_DATE.finditer(text):
         day, month = int(m.group(1)), int(m.group(2))
