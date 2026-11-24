@@ -1,6 +1,6 @@
 """Orchestration: notice in, checked summary out.
 
-Flow (see the brief, Step 7):
+The flow:
 
 1. Reject bad input: empty, too short (under :data:`MIN_WORDS` words), or too
    long (over :data:`MAX_WORDS` words).

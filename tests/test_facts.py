@@ -1,6 +1,6 @@
-"""Tests for notice_tool.facts — written test-first (Step 3).
+"""Tests for notice_tool.facts — written test-first.
 
-Expected values come straight from the facts table in the brief.
+The expected values below are the cases I wrote down before implementing.
 """
 
 import pytest

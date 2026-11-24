@@ -1,4 +1,4 @@
-"""Tests for notice_tool.llm_summarizer (Step 6).
+"""Tests for notice_tool.llm_summarizer.
 
 These tests never touch the real API. A tiny fake LLM stands in for the model:
 it records the prompt it is given and returns a pre-built ``ParentSummary``.

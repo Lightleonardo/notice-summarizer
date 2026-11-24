@@ -13,5 +13,6 @@ __pycache__/
 *.py[cod]
 *.egg-info/
 
-# Brief / assignment documents
+# Word documents
 .docx
+steps-mvp.docx

@@ -1,13 +1,13 @@
-"""Core end-to-end flows (Step 9).
+"""Core end-to-end flows.
 
-These drive the *whole* pipeline - input validation, checklist, baseline, the
-model call, the validator, the one retry, the fallback, the log, and the user
-override - over the real synthetic notices in ``samples/``. They use
-:class:`ScriptedLLM` (a stand-in that returns prepared outputs, or raises a
-prepared exception), so no test ever calls the real API.
+These run the full pipeline end to end - input validation, checklist, baseline,
+the model call, the validator, the one retry, the fallback, the log, and the
+overriding of the result - over the real notices in ``samples/``. They use
+``ScriptedLLM``, a stand-in that returns prepared outputs (or raises a prepared
+exception), so no test ever calls the real API.
 
-The per-branch unit tests live in ``test_pipeline.py``; this file is the
-integration-level "tested core flows" suite the brief asks for.
+The per-branch unit tests are in ``test_pipeline.py``; this file is the
+integration-level one.
 """
 
 import json

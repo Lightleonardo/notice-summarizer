@@ -1,10 +1,10 @@
-"""Tests for notice_tool.validator - the accuracy checklist (Step 5).
+"""Tests for notice_tool.validator - the accuracy checklist.
 
 The validator compares a summary to its source and returns a report of checks,
-each with a pass/fail and a short detail. These tests cover the cases named in
-the brief: a good summary passes, each changed fact is caught, invented facts
-are caught, a dropped prohibition is caught, fake evidence is caught, an
-over-long summary is caught, and equivalent formats pass.
+each with a pass/fail and a short detail. These tests cover the main cases: a
+good summary passes, each changed fact is caught, invented facts are caught, a
+dropped prohibition is caught, fake evidence is caught, an over-long summary is
+caught, and equivalent formats pass.
 """
 
 from pathlib import Path
@@ -140,7 +140,7 @@ def test_equivalent_formats_pass():
 
 
 # --------------------------------------------------------------------------- #
-# Failure message (used for the retry prompt in Step 7)
+# Failure message (used as the retry prompt)
 # --------------------------------------------------------------------------- #
 def test_failure_message_lists_failed_checks():
     report = validate_summary(

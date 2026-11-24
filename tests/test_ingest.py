@@ -1,4 +1,4 @@
-"""Tests for notice_tool.ingest - turning an upload into clean text (Step 8)."""
+"""Tests for notice_tool.ingest - turning an upload into clean text."""
 
 import pytest
 

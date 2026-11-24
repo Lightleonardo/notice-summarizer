@@ -1,4 +1,4 @@
-"""Evaluation (Step 10).
+"""Evaluation.
 
 Runs every notice in ``samples/`` through the extractive baseline - and, when a
 real ``OPENAI_API_KEY`` is configured, through the AI path - then writes a report

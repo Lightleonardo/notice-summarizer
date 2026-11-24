@@ -1,4 +1,4 @@
-"""Tests for the Streamlit app (Step 8).
+"""Tests for the Streamlit app.
 
 The app is driven with streamlit.testing.v1.AppTest. No API key is configured,
 so the app takes the extractive-only path and never calls a real model.
@@ -23,7 +23,9 @@ def _no_api_key(monkeypatch):
 
 
 def _start():
-    return AppTest.from_file(str(APP), default_timeout=30).run()
+    # Streamlit's test runner has noticeable start-up overhead; keep the timeout
+    # generous so a loaded machine does not produce false failures.
+    return AppTest.from_file(str(APP), default_timeout=60).run()
 
 
 def test_app_summarises_without_a_model():

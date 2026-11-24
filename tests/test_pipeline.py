@@ -1,4 +1,4 @@
-"""Tests for notice_tool.pipeline (Step 7).
+"""Tests for notice_tool.pipeline.
 
 Every test uses a scripted stand-in for the model, never the real API. The
 scripted LLM records the prompts it receives and returns prepared outputs (or

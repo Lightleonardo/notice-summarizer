@@ -1,4 +1,4 @@
-"""Tests for notice_tool.checklist — rule-based notice checks (Step 4)."""
+"""Tests for notice_tool.checklist — rule-based notice checks."""
 
 from pathlib import Path
 

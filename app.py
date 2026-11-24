@@ -8,7 +8,6 @@ Thin on purpose: every piece of logic lives in ``notice_tool``. Run with:
 from __future__ import annotations
 
 import os
-
 import streamlit as st
 from dotenv import load_dotenv
 

@@ -1,4 +1,4 @@
-"""Tests for notice_tool.text — sentence splitting (Step 4)."""
+"""Tests for notice_tool.text — sentence splitting."""
 
 from notice_tool.text import normalize, split_sentences
 

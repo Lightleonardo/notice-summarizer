@@ -1,4 +1,4 @@
-"""Tests for evaluate.py (Step 10).
+"""Tests for evaluate.py.
 
 We test the two pieces of logic the evaluation report depends on: the fact-recall
 measure and the markdown it is rendered into. The AI path is skipped when no key

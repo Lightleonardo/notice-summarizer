@@ -1,4 +1,4 @@
-"""Tests for notice_tool.baseline — extractive summary (Step 4)."""
+"""Tests for notice_tool.baseline — extractive summary."""
 
 from pathlib import Path
 
